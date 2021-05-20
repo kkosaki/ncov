@@ -1,0 +1,40 @@
+Akita City Public Health Center	Akita
+Chiba Prefectural Institute of Public Health	Chiba
+Department of Infectious Diseases, Kobe Institute of Health	Hyogo
+Fukui Prefectural Institute of Public Health and Environmental Science	Fukui
+Fukuoka Institute of Health and Environmental Sciences	Fukuoka
+Gifu Prefectural Institute of Public Health and Environmental Sciences	Gifu
+Gunma Prefectural Institute of Public Health and Environmental Sciences	Gunma
+Himeji City Institute of Environment and Health	Hyogo
+Hiroshima City Institute of Public Health	Hiroshima
+Hokkaido Institute of Public Health	Hokkaido
+Ibaraki Prefectural Institute of Public Health	Ibaraki
+Ishikawa Prefectural Institute of Public Health and Environmental Science	Ishikawa
+Kanagawa Prefectural Institute of Public Health	Kanagawa
+Kitakyushu City Institute of Health and Environmental Sciences	Fukuoka
+Kochi Prefectural Institute of Public Health	Kochi
+Koshigaya City Public Health Center	Saitama
+Kumamoto City Public Health Research Institute	Kumamoto
+Kumamoto PrefecturalInstituteof Public-Health and Environmental Science	Kumamoto
+Nagano Environmental Conservation Research Institute	Nagano
+Nagasaki Prefectural Institute for Environmental Research and Public Health	Nagasaki
+Nagoya City Public Health Research Institute	Nagoya
+Niigata City Public Health Research Institute	Niigata
+Niigata Prefectural Institute of Public Health and Environmental Sciences	Niigata
+Oita Prefectural Institute of Public Health and Environmental Science	Oita
+Osaka Institute of Public Health	Osaka
+Osaka Institute of Public Health, Morinomiya Center	Osaka
+Ota Health Center Welfare Section	Tokyo
+Sagamihara City Public Health Research Institute	Kanagawa
+Saitama Prefectural Institute of Public Health	Saitama
+Sakai City Institute of Public Health	Osaka
+Sapporo City Institute of Public Health	Hokkaido
+Shizuoka City Institute of Environmental Sciences and Public Health	Shizuoka
+Tochigi Prefectural Institute of Public Health and Environmental Science	Tochigi
+Tokyo Metropolitan Institute of Public Health	Tokyo
+Toyama Institute of Health	Toyama
+Wakayama Prefectural Research Center of Environment and Public Health	Wakayama
+Yamagata Prefectural Institute of Public Health	Yamagata
+Takayuki Hishiki Kanagawa Prefectural Institute of Public Health	Kanagawa
+Tokyo Metropolitan Institute of Public Health, Department of Microbiology	Tokyo
+Department of Microbiology; Ryota Kumagai Tokyo Metropolitan Institute of Public Health	Tokyo

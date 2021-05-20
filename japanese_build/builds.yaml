@@ -1,0 +1,183 @@
+
+custom_rules:
+  - japanese_build/subsampling_ranges.smk
+  - japanese_build/localrules.smk
+ 
+nextalign_bin: "nextalign"
+genes: ["ORF1a", "ORF1b", "S", "ORF3a", "M", "N"]
+use_nextalign: true
+
+
+inputs:
+  - name: GISAID-DATA
+    metadata: data/gisaid_metadata_latest.tsv
+    sequences: data/gisaid_latest.fasta.gz
+
+#exclude_ambiguous_dates_by: "day"
+
+builds:
+  japan:
+    subsampling_scheme: japan
+    geographic_scale: country
+    region: Asia
+    country: Japan
+    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan"
+  Pango-R1:
+    subsampling_scheme: pangolin_lineage
+    pango_lineage: "R.1"
+    geographic_scale: country
+    region: Asia
+    country: Japan
+    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (Pango lineage:R.1)"
+  501Y-V1:
+    subsampling_scheme: variants
+    clade: "20I/501Y.V1"
+    geographic_scale: country
+    region: Asia
+    country: Japan
+    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (20I/501Y.V1)"
+  501Y-V2:
+    subsampling_scheme: variants
+    clade: "20H/501Y.V2"
+    geographic_scale: country
+    region: Asia
+    country: Japan
+    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (20H/501Y.V2)"
+  501Y-V3:
+    subsampling_scheme: variants
+    clade: "20J/501Y.V3"
+    geographic_scale: country
+    region: Asia
+    country: Japan
+    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (20J/501Y.V3)"
+
+
+# trait reconstruction
+traits:
+  japan:
+    sampling_bias_correction: 2.5
+    columns: ["country","country_exposure","division","division_exposure"]
+  501Y-V1:
+    sampling_bias_correction: 2.5
+    columns: ["country","country_exposure","division","division_exposure"]
+  501Y-V2:
+    sampling_bias_correction: 2.5
+    columns: ["country","country_exposure","division","division_exposure"]
+  501Y-V3:
+    sampling_bias_correction: 2.5
+    columns: ["country","country_exposure","division","division_exposure"]
+  Pango-R1:
+    sampling_bias_correction: 2.5
+    columns: ["country","country_exposure","division","division_exposure"]
+
+# incorporate exposure information
+exposure:
+  japan:
+    trait: "country"
+    exposure: "country_exposure"
+  501Y-V1:
+    trait: "country"
+    exposure: "country_exposure"
+  501Y-V2:
+    trait: "country"
+    exposure: "country_exposure"
+  501Y-V3:
+    trait: "country"
+    exposure: "country_exposure"
+  Pango-R1:
+    trait: "country"
+    exposure: "country_exposure"
+
+files:
+  auspice_config: "japanese_build/japan_auspice_config.json"
+  colors: "japanese_build/colors.tsv"
+  description: "japanese_build/japan_description.md"
+  lat_longs: "japanese_build/lat_longs_ja.tsv"
+
+subsampling:
+  # Default subsampling logic for countries
+  japan:
+    country_early:
+      group_by: "division year month"
+      max_sequences: 500
+      exclude: "--exclude-where 'country!={country}'"
+    country_late:
+      group_by: "division year month"
+      max_sequences: 1000
+      exclude: "--exclude-where 'country!={country}'"
+    country_recent:
+      group_by: "division year month"
+      max_sequences: 1500
+      exclude: "--exclude-where 'country!={country}'"
+    # Contextual samples from country's region
+    region_early:
+      group_by: "country year month"
+      max_sequences: 250
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'country={country}' 'region!={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country_early"
+    # Contextual samples from the rest of the world,
+    # excluding the current region to avoid resampling.
+    global_early:
+      group_by: "country year month"
+      max_sequences: 300
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'region={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country_early"
+    region_late:
+      group_by: "country year month"
+      max_sequences: 750
+      exclude: "--exclude-where 'country={country}' 'region!={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country_late"
+    # Contextual samples from the rest of the world,
+    # excluding the current region to avoid resampling.
+    global_late:
+      group_by: "country year month"
+      max_sequences: 500
+      exclude: "--exclude-where 'region={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country_late"
+
+  # Default subsampling logic for variants
+  variants:
+    # Focal samples for country
+    variant:
+      group_by: "division year month"
+      max_sequences: 1500
+      exclude: "--exclude-where 'Nextstrain_clade!={clade}' 'country!={country}'"
+      sampling_scheme: "--probabilistic-sampling"
+    # Contextual samples from country
+    global:
+      group_by: "country year month"
+      max_sequences: 1000
+      exclude: "--exclude-where 'country={country}' 'Nextstrain_clade!={clade}'"
+      sampling_scheme: "--probabilistic-sampling"
+      priorities:
+        type: "proximity"
+        focus: "variant"
+
+  pangolin_lineage:
+    # Focal samples for country
+    lineage:
+      group_by: "division year month"
+      max_sequences: 1500
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'pango_lineage!={pango_lineage}' 'country!={country}'"
+    # Contextual samples from country's region
+    global:
+      group_by: "country year month"
+      max_sequences: 1000
+      exclude: "--exclude-where 'country={country}' 'pango_lineage!={pango_lineage}'"
+      sampling_scheme: "--probabilistic-sampling"
+      priorities:
+        type: "proximity"
+        focus: "lineage"
+        
+
