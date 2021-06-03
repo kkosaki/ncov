@@ -38,3 +38,38 @@ Yamagata Prefectural Institute of Public Health	Yamagata
 Takayuki Hishiki Kanagawa Prefectural Institute of Public Health	Kanagawa
 Tokyo Metropolitan Institute of Public Health, Department of Microbiology	Tokyo
 Department of Microbiology; Ryota Kumagai Tokyo Metropolitan Institute of Public Health	Tokyo
+Department of Emerging Infectious Diseases, Institute of Tropical Medicine, Nagasaki University	Nagasaki
+Department of Epidemiology, Infectious Disease Control and Prevention, Hiroshima University, Japan	Hiroshima
+Department of Infectious Diseases and Immunology, National Hospital Organization Nagoya Medical Center 	Nagoya
+Department of Infectious, Respiratory and Digestive Medicine, Graduate School of Medicine, University of the Ryukyus	Okinawa
+Department of Intensive Care Medicine, and clinical lab., Osaka Women's and Children's Hospital	      Osaka
+Department of Microbiology, Yokohama City University School of Medicine	Kanagawa
+Department of Respiratory Medicine, Nagasaki University Hospital, Nagasaki, Japan	Nagasaki
+Department of Virology Institute of Tropical Medicine Nagasaki University   Nagasaki
+Departments of Intensive Care Medicine, and Clinical lab, Osaka Women's and Children's Hospital	Osaka
+Dr. Yoshitaka Tamura, Department of Clinical Laboratory, Osaka Habikino Medical Center Osaka
+Ehime Prefectural Central Hospital  Ehime
+Fujita Health University Bantane Hospital	Aichi
+Fujita Health University Hospital		Aichi
+Genome Analysis Center, Kamma Memorial Hospital	Tochigi
+Genome Analysis Center, Yamanashi Central Hospital	Yamanashi
+Isehara Kyodo Hospital	Kanagawa
+Japanese Red Cross Nagoya Daiichi Hospital	Aichi
+Japanese Red Cross Narita Hospital		Chiba
+Kawakita General Hospital Tokyo
+Kei Haga Omura Satoshi Memorial Institute, Kitasato University, Infection Control and Immunology	Tokyo
+Kitakyushu Municipal Medical Center	   Fukuoka
+Komatsu Municipal Hospital   Ishikawa
+Kumamoto Prefectural Institute of Public-Health and Environmental Science	Kumamoto
+NTT East Sapporo Hospital      Hokkaido
+Nara Medical University Hospital	Nara
+National Hospital Organization Kanazawa Medical Center	Ishikawa
+Sagamihara Kyodo Hospital      Kanagawa
+Saiseikai Niigata Hospital     Niigata
+Saitama Medical University     Saitama
+Saitama Medical University Hospital	Saitama
+Tokyo Medical and Dental University	Tokyo
+Tosei General Hospital	 Aichi
+University Hospital Kyoto Prefectural University of Medicine	Kyoto
+Yokohama City University Hospital     Kanagawa
+Kumamoto Prefectural Institute of Public-Health and Environmental Science	Kumamoto

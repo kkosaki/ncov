@@ -105,7 +105,9 @@ location	Oita	#E68935
 location	Miyazaki	#E67F33
 location	Kagoshima	#E67431
 location	Okinawa	#E4682F
-		
+
+country		JapanQuarantine	#ea61ff
+
 recency	Older	#416DCE
 recency	One month ago	#59A3AA
 recency	One week ago	#84BA6F

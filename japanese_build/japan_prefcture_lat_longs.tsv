@@ -33,5 +33,6 @@ division	Oita	33.203809	131.411655
 division	Miyazaki	32.200128	131.353483
 division	Kagoshima	31.355836	130.410976
 division	Okinawa	26.477084	127.922927
-division        JapanQuarantine 33.918546	138.103976
-
+division	JapanQuarantine	33.918546	138.103976
+country	JapanQuarantine	33.918546	138.103976
+division	Japan	36.3	145.5
