@@ -4,7 +4,7 @@ Nextstrain community build of SARS-CoV-2 focused on Japan
 
 
 - Japan
-https://github.com/kkosaki/ncov
+https://nextstrain.org/community/kkosaki/ncov/japan
 
 - Alpha (Nextstrain Clade: 20I)
 https://nextstrain.org/community/kkosaki/ncov/Alpha
