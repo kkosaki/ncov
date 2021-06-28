@@ -294,81 +294,81 @@ USA/CruiseA-26/2020
 # Peru/010/2020
 
 # Japan Diamond Princess sequences
-Japan0005/2020
-Japan0027/2020
-Japan0037/2020
-Japan0058/2020
-Japan0059/2020
-Japan0065/2020
-Japan0077/2020
-Japan0078/2020
-Japan0104/2020
-Japan0107/2020
-Japan0121/2020
-Japan0133/2020
-Japan0134/2020
-Japan0152/2020
-Japan0158/2020
-Japan0184/2020
-Japan0190/2020
-Japan0191/2020
-Japan0196/2020
-Japan0200/2020
-Japan0236/2020
-Japan0274/2020
-Japan0278/2020
-Japan0286/2020
-Japan0287/2020
-Japan0289/2020
-Japan0290/2020
-Japan0294/2020
-Japan0311/2020
-Japan0319/2020
-Japan0328/2020
-Japan0344/2020
-Japan0346/2020
-Japan0357/2020
-Japan0361/2020
-Japan0438/2020
-Japan0457/2020
-Japan0462/2020
-Japan0464/2020
-Japan0476/2020
-Japan0481/2020
-Japan0482/2020
-Japan0543/2020
-Japan0544/2020
-Japan0568/2020
-Japan0588/2020
-Japan0644/2020
-Japan0645/2020
-Japan0654/2020
-Japan0687/2020
-Japan0690/2020
-Japan0697/2020
-Japan0699/2020
-Japan0700/2020
-Japan0703/2020
-Japan0724/2020
-Japan0743/2020
-Japan0752/2020
-Japan0763/2020
-Japan0764/2020
-Japan0765/2020
-Japan0779/2020
-Japan0785/2020
-Japan0786/2020
-Japan0802/2020
-Japan0803/2020
-Japan0804/2020
-Japan0827/2020
-Japan0880/2020
-Japan0890/2020
+Japan/DP0005/2020
+Japan/DP0027/2020
+Japan/DP0037/2020
+Japan/DP0058/2020
+Japan/DP0059/2020
+Japan/DP0065/2020
+Japan/DP0077/2020
+Japan/DP0078/2020
+Japan/DP0104/2020
+Japan/DP0107/2020
+Japan/DP0121/2020
+Japan/DP0133/2020
+Japan/DP0134/2020
+Japan/DP0152/2020
+Japan/DP0158/2020
+Japan/DP0184/2020
+Japan/DP0190/2020
+Japan/DP0191/2020
+Japan/DP0196/2020
+Japan/DP0200/2020
+Japan/DP0236/2020
+Japan/DP0274/2020
+Japan/DP0278/2020
+Japan/DP0286/2020
+Japan/DP0287/2020
+Japan/DP0289/2020
+Japan/DP0290/2020
+Japan/DP0294/2020
+Japan/DP0311/2020
+Japan/DP0319/2020
+Japan/DP0328/2020
+Japan/DP0344/2020
+Japan/DP0346/2020
+Japan/DP0357/2020
+Japan/DP0361/2020
+Japan/DP0438/2020
+Japan/DP0457/2020
+Japan/DP0462/2020
+Japan/DP0464/2020
+Japan/DP0476/2020
+Japan/DP0481/2020
+Japan/DP0482/2020
+Japan/DP0543/2020
+Japan/DP0544/2020
+Japan/DP0568/2020
+Japan/DP0588/2020
+Japan/DP0644/2020
+Japan/DP0645/2020
+Japan/DP0654/2020
+Japan/DP0687/2020
+Japan/DP0690/2020
+Japan/DP0697/2020
+Japan/DP0699/2020
+Japan/DP0700/2020
+Japan/DP0703/2020
+Japan/DP0724/2020
+Japan/DP0743/2020
+Japan/DP0752/2020
+Japan/DP0763/2020
+Japan/DP0764/2020
+Japan/DP0765/2020
+Japan/DP0779/2020
+Japan/DP0785/2020
+Japan/DP0786/2020
+Japan/DP0802/2020
+Japan/DP0803/2020
+Japan/DP0804/2020
+Japan/DP0827/2020
+Japan/DP0880/2020
+Japan/DP0890/2020
 #
 ## USA Diamond Princess sequences
-USA/CruiseA-19/2020
-USA/CruiseA-21/2020
-USA/CruiseA-22/2020
+#USA/CruiseA-19/2020
+#USA/CruiseA-21/2020
+#USA/CruiseA-22/2020
 
 # Suspected wrong date - listed as 16 Feb but code says epi week 16 (12-18 Apr) see https://bedfordlab.slack.com/archives/CSKMU6YUC/p1595518895288300
 England/20168037604/2020
@@ -2201,7 +2201,7 @@ USA/KS-KHEL-1913/2020
 # Suspiciously early for clade
 England/LCST-24DE3CC/2020
 
-Sample date before clade (see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1622107826150400):
+# Sample date before clade (see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1622107826150400):
 Italy/CAM-TIGEM-IZSM-COLLI-14397/2021
 Qatar/QA.QU_18.10.B12/2020
 Qatar/QA.QU_18.10.E12/2020
@@ -2211,3 +2211,175 @@ Spain/MD-HRYC-71299296/2020
 
 # https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1622214173170700
 Mongolia/3622/2020
+
+# Sample date before clade
+SouthKorea/KDCA4115/2020
+USA/LA-EVTL2775/2021
+USA/LA-EVTL2776/2021
+
+# Divergence
+Iran/T11514/2021
+USA/LA-EVTL2492/2021
+Brazil/PB-BA1200-250009713/2020
+Brazil/RJ-FIOCRUZ-2188-1P/2020
+Spain/MD-IBV-99018541/2020
+Italy/CAM-TIGEM-IZSM-COLLI-14404/2021
+Italy/CAM-TIGEM-IZSM-COLLI-14404/2021
+USA/WA-UW-2105/2020
+India/MH-ICMR-NIV-INSAGOG-GSEQ-2375/2020
+India/TG-CDFD-N5400/2020
+
+# Date
+Switzerland/VD-CHUV-GEN2474/2020
+
+# Misdated; https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1622739851264500
+USA/MI-MDHHS-SC28884/2021
+USA/MI-MDHHS-SC28909/2021
+
+# divergence; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1622670440258000
+Colombia/COR-U24/2020
+Iran/Esf-11-169/2021
+Panama/GMI-PABT2504/2020
+Spain/AN-ISCIII-201636/2020
+USA/TX-HMH-MCoV-41494/2020
+USA/WA-UW-1972/2020
+
+# misdated; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1622745640267300
+USA/TX-HMH-MCoV-40911/2020
+USA/TX-HMH-MCoV-40926/2020
+
+# Divergence; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1622798726274300
+Belgium/MBLGc7385/2020
+
+# Divergence; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1622804065277800 and following threads
+Iran/T11877/2021
+India/UP-CCMB-CIA1758/2021
+Egypt/NRC-5918/2020
+Iran/T11529/2021
+Mongolia/3624/2020
+CzechRepublic/VIR-196/2021
+
+# s1 mutations - possible bioinformatic issue; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1622838574295600
+India/GA-NCCS-169260/2021
+India/GA-NCCS-NS2561/2021
+India/GA-NCCS-NS2566/2021
+India/MH-NCCS-2748700441970/2021
+India/MH-NCCS-2749001147276/2021
+India/MH-NCCS-2749001185481/2021
+India/MH-NCCS-AFMC-45271/2021
+
+#divergence; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1622838574295600
+Brazil/SP-L112-CD4087/2020
+USA/TX-HMH-MCoV-41509/2020
+
+# date
+Norway/7651/2020
+
+# Divergence (see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1623136183316600 and following threads)
+Paraguay/PY45/2021
+Mongolia/3001/2020
+Ireland/LH-NVRL-g20IRL08001/2020
+Latvia/229/2021
+NorthMacedonia/29934/2021
+SriLanka/CDR107/2021
+Indonesia/SS-NIHRD-WGS002222/2021
+Egypt/NRC-6781/2020
+Italy/CAM-TIGEM-IZSM-COLLI-14403/2021
+USA/CA-CSMC110/2020
+Turkey/HSGM-10611/2021
+India/UP-CCMB-CIA1728/2021
+Egypt/NRC-6781/2020
+Egypt/NRC-6792/2020
+Brazil/RS-LMM48674/2021
+
+# deletion in ORF1a
+India/MH-NCCS-2748000335553/2021
+
+# Divergence (see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1623221408342400 and following threads)
+Botswana/CV1507452/2021
+Netherlands/NB-EMC-813/2020
+Iran/Hormozgan/2021
+USA/WA-UW-12659/2020
+Panama/GMI-PA352445/2020
+USA/TX-HMH-MCoV-34797/2020
+Slovakia/UVZ_PL11_G3_8404/2021
+USA/WA-UW306/2020
+USA/WA-UW-9190/2020
+
+
+# Recombinant (see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1623222061345400)
+USA/MN-CDC-LC0060370/2021
+
+# Divergence (see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1623306212359300 and following threads)
+Mongolia/29432/2020
+Mongolia/7908/2020
+Mongolia/Imp3989/2020
+Kazakhstan/KUS-NRL-602S/2021
+India/ILSGS00941/2020
+USA/WA-UW-12935/2020
+USA/TX-HMH-MCoV-40904/2020
+Peru/LIM-INS-768/2020
+Mongolia/7908/2020
+India/MH-NIV-8404/2020
+Panama/GMI-PACNB11556/2020
+
+# Sampling date and clock deviation, see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1623307741362800
+India/MP-NCDC-2509230/2020
+
+# duplicates; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1623704938385700
+# additional_host_info: Traveller from São Paulo - Same patient from São Paulo, Brazil - hCoV-19/Brazil/SP-2898/2021 - EPI_ISL_2274979
+Brazil/RJ-FIOCRUZ-25683/2021
+# EPI_ISL_2466267 additional_host_info: virus isolated from hCoV-19/Brazil/AM-FIOCRUZ-20141493LR/2020 - EPI_ISL_1068092
+Brazil/AM-FIOCRUZ-34074-1P/2020
+# EPI_ISL_2466266 additional_host_info: virus isolated from hCoV-19/Brazil/AM-FIOCRUZ-20140452MJ-R1/2020 - EPI_ISL_1034305
+Brazil/AM-FIOCRUZ-34075-R1-1P/2020
+# EPI_ISL_2466265 additional_host_info: virus isolated from hCoV-19/Brazil/AM-FIOCRUZ-20897269OP/2020 - EPI_ISL_1068256
+Brazil/AM-FIOCRUZ-34077-1P/2020
+
+# sample date before clade; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1623710029387300
+Canada/BC-BCCDC-14365/2020
+Canada/BC-BCCDC-14366/2020
+Canada/BC-BCCDC-14367/2020
+Canada/BC-BCCDC-14368/2020
+Canada/BC-BCCDC-14369/2020
+Canada/BC-BCCDC-14457/2020
+Canada/BC-BCCDC-14458/2020
+Canada/BC-BCCDC-14459/2020
+Canada/BC-BCCDC-14460/2020
+Canada/BC-BCCDC-14461/2020
+Canada/BC-BCCDC-14462/2020
+Canada/BC-BCCDC-14463/2020
+Canada/BC-BCCDC-15192/2020
+Canada/BC-BCCDC-15474/2020
+Canada/BC-BCCDC-15475/2020
+Canada/BC-BCCDC-9651/2020
+Canada/BC-BCCDC-9652/2020
+Canada/BC-BCCDC-9653/2020
+Canada/BC-BCCDC-9659/2020
+France/IDF-HB_112010000864/2020
+France/IDF-HB_112010003918/2020
+France/IDF-HB_112010005538/2020
+France/IDF-HB_112010014593/2020
+France/IDF-HB_112010016977/2020
+Zimbabwe/CERI-KRISP-K011643/2020
+Zimbabwe/CERI-KRISP-K011662/2020
+
+# sample date before clade; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1623865783396900
+USA/SC-DHEC-1826/2020
+
+# s1 muts; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1623806802393700
+India/MH-NCCS-AFMC-48121/2021
+
+# misdated; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1623957828406800
+Canada/BC-BCCDC-10959/2020
+Canada/BC-BCCDC-11421/2020
+Canada/BC-BCCDC-11422/2020
+Canada/BC-BCCDC-11602/2020
+Canada/BC-BCCDC-12035/2020
+Canada/BC-BCCDC-12786/2020
+Canada/BC-BCCDC-12881/2020
+Canada/BC-BCCDC-13443/2020
+Canada/BC-BCCDC-13444/2020
+Canada/BC-BCCDC-13632/2020
+Canada/BC-BCCDC-14740/2020
+Canada/BC-BCCDC-9093/2020

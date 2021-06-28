@@ -1,18 +1,33 @@
+ruleorder: sanitize_metadata_japan > sanitize_metadata
 
-ruleorder: adjust_metadata_divisions_global > adjust_metadata_regions
-ruleorder: finalize_japan > finalize
-
-rule reassignment_japan_quarantine_metadata:
-    message: "Exclude Japanese quarantine strains"
+rule sanitize_metadata_japan:
     input:
-        metadata = _get_unified_metadata
+        metadata=lambda wildcards: _get_path_for_input("metadata", wildcards.origin)
     output:
-        metadata = "results/metadata_with_reassignments.tsv"
+        tmp_metadata="results/_sanitized_metadata_{origin}.tsv.xz",
+        metadata="results/sanitized_metadata_{origin}.tsv.xz"
+    benchmark:
+        "benchmarks/sanitize_metadata_{origin}.txt"
+    conda:
+        config["conda_environment"]
+    log:
+        "logs/sanitize_metadata_{origin}.txt"
+    params:
+        parse_location_field=f"--parse-location-field {config['sanitize_metadata']['parse_location_field']}" if config["sanitize_metadata"].get("parse_location_field") else "",
+        rename_fields=config["sanitize_metadata"]["rename_fields"],
+        strain_prefixes=config["strip_strain_prefixes"],
     shell:
         """
-        perl japanese_build/reassignment_japan_quarantine_metadata.pl <(xzcat {input.metadata})  > {output.metadata}
-
+        perl japanese_build/reassignment_japan_quarantine_metadata.pl <(zcat {input.metadata}) | xz -2  > {output.tmp_metadata} &&\
+        python3 scripts/sanitize_metadata.py \
+            --metadata {output.tmp_metadata} \
+            {params.parse_location_field} \
+            --rename-fields {params.rename_fields:q} \
+            --strip-prefixes {params.strain_prefixes:q} \
+            --output {output.metadata} 2>&1 | tee {log}
         """
+
+ruleorder: adjust_metadata_divisions_global > adjust_metadata_regions
 
 rule adjust_metadata_division_japan:
     message:
@@ -20,7 +35,7 @@ rule adjust_metadata_division_japan:
         Adjusting metadata for build '{wildcards.build_name} :: Division'
         """
     input:
-        metadata = rules.reassignment_japan_quarantine_metadata.output.metadata
+        metadata = _get_unified_metadata
     output:
         metadata = "results/{build_name}/metadata_adjusted_division_japan.tsv.xz"
     log:
@@ -28,7 +43,7 @@ rule adjust_metadata_division_japan:
     conda: config["conda_environment"]
     shell:
         """
-         perl japanese_build/adjust_division_by_orilab.pl {input.metadata}  japanese_build/orilab_prefecture.txt | xz -2 > {output.metadata} 
+         perl japanese_build/adjust_division_by_orilab.pl <(xzcat {input.metadata} )  japanese_build/orilab_prefecture.txt | xz -2 > {output.metadata} 
         """
 
 rule adjust_metadata_divisions_global:
