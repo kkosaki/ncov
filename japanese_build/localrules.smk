@@ -1,10 +1,12 @@
+
 ruleorder: sanitize_metadata_japan > sanitize_metadata
 
 rule sanitize_metadata_japan:
     input:
         metadata=lambda wildcards: _get_path_for_input("metadata", wildcards.origin)
     output:
-        tmp_metadata="results/_sanitized_metadata_{origin}.tsv.xz",
+        tmp_metadata="results/_sanitized_metadata_division_{origin}.tsv.xz",
+        tmp_metadata2="results/_sanitized_metadata_quarantine_{origin}.tsv.xz",
         metadata="results/sanitized_metadata_{origin}.tsv.xz"
     benchmark:
         "benchmarks/sanitize_metadata_{origin}.txt"
@@ -18,33 +20,18 @@ rule sanitize_metadata_japan:
         strain_prefixes=config["strip_strain_prefixes"],
     shell:
         """
-        perl japanese_build/reassignment_japan_quarantine_metadata.pl <(zcat {input.metadata}) | xz -2  > {output.tmp_metadata} &&\
+        perl japanese_build/adjust_division_by_orilab.pl <(zcat {input.metadata} )  japanese_build/orilab_prefecture.txt | xz -2 > {output.tmp_metadata} &&\
+        perl japanese_build/reassignment_japan_quarantine_metadata.pl <(xzcat {output.tmp_metadata})  | xz -2  > {output.tmp_metadata2} &&\
         python3 scripts/sanitize_metadata.py \
-            --metadata {output.tmp_metadata} \
+            --metadata {output.tmp_metadata2} \
             {params.parse_location_field} \
             --rename-fields {params.rename_fields:q} \
             --strip-prefixes {params.strain_prefixes:q} \
             --output {output.metadata} 2>&1 | tee {log}
         """
 
-ruleorder: adjust_metadata_divisions_global > adjust_metadata_regions
 
-rule adjust_metadata_division_japan:
-    message:
-        """
-        Adjusting metadata for build '{wildcards.build_name} :: Division'
-        """
-    input:
-        metadata = _get_unified_metadata
-    output:
-        metadata = "results/{build_name}/metadata_adjusted_division_japan.tsv.xz"
-    log:
-        "logs/adjust_metadata_division_{build_name}.txt"
-    conda: config["conda_environment"]
-    shell:
-        """
-         perl japanese_build/adjust_division_by_orilab.pl <(xzcat {input.metadata} )  japanese_build/orilab_prefecture.txt | xz -2 > {output.metadata} 
-        """
+ruleorder: adjust_metadata_divisions_global > adjust_metadata_regions
 
 rule adjust_metadata_divisions_global:
     message:
@@ -52,7 +39,7 @@ rule adjust_metadata_divisions_global:
         Adjusting metadata for build '{wildcards.build_name}'
         """
     input:
-        metadata = rules.adjust_metadata_division_japan.output.metadata
+        metadata = _get_unified_metadata
     output:
         metadata = "results/{build_name}/metadata_adjusted.tsv.xz"
     params:

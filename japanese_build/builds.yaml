@@ -18,7 +18,6 @@ builds:
     region: Asia
     country: Japan
     title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan"
-
   Alpha:
     subsampling_scheme: variants
     clade: "20I (Alpha, V1)"
@@ -139,25 +138,28 @@ subsampling:
       group_by: "country year month"
       max_sequences: 1000
       sampling_scheme: "--probabilistic-sampling"
-      exclude: "--exclude-where 'region={region}'"
+      #exclude: "--exclude-where 'region={region}'"
+      query: --query "(country!='{country}') & (country!='JapanQuarantine') "
       priorities:
         type: "proximity"
         focus: "country_early"
     global_late:
       group_by: "country year month"
       max_sequences: 1500
-      exclude: "--exclude-where 'region={region}'"
+      query: --query "(country!='{country}') & (country!='JapanQuarantine') "
+      #exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
         focus: "country_recent"
     global_recent:
       group_by: "country year month"
       max_sequences: 1500
-      exclude: "--exclude-where 'region={region}'"
+      query: --query "(country!='{country}') & (country!='JapanQuarantine') "
+      #exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
         focus: "country_recent"
- 
+
   # Subsampling for Pango lineage 
   pangolin_lineage:
     lineage:
@@ -170,10 +172,11 @@ subsampling:
       max_sequences: 500
       exclude: "--exclude-where 'pango_lineage!={pango_lineage}' 'country!=JapanQuarantine'"
       sampling_scheme: "--probabilistic-sampling"
+    #global proximity 
     global_proxy:
       group_by: "country year month"
       max_sequences: 500
-      exclude: "--exclude-where 'country={country}' 'pango_lineage!={pango_lineage}'"
+      query: --query "(country!='{country}') & (country!='JapanQuarantine') & (pango_lineage=='{pango_lineage}') "
       sampling_scheme: "--probabilistic-sampling"
       priorities:
         type: "proximity"
@@ -182,33 +185,7 @@ subsampling:
     global:
       group_by: "country year month"
       max_sequences: 2500
-      exclude: "--exclude-where 'country={country}' 'pango_lineage!={pango_lineage}'"
-      sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "lineage"
-
-  # Subsampling for Pango lineage and its sublineages
-  pangolin_sublineage:
-    lineage:
-      group_by: "division year month"
-      max_sequences: 3000
-      sampling_scheme: "--probabilistic-sampling"
-      query: --query "(country=='{country}') & (pango_lineage.str.startswith('{pango_lineage}'))"
-    # JapanQuarantine
-    quarantine:
-      group_by: "division year month"
-      max_sequences: 1000
-      query: --query "(country=='JapanQuarantine') & (pango_lineage.str.startswith('{pango_lineage}'))"
-      sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "lineage"
-    # Contextual samples from country's region
-    global:
-      group_by: "country year month"
-      max_sequences: 5000
-      query: --query "(country!='{country}') & (pango_lineage.str.startswith('{pango_lineage}'))"
+      query: --query "(country!='{country}') & (country!='JapanQuarantine') & (pango_lineage=='{pango_lineage}') "
       sampling_scheme: "--probabilistic-sampling"
       priorities:
         type: "proximity"
@@ -231,17 +208,14 @@ subsampling:
         focus: "variant"
     global_proxy:
       group_by: "country year month"
-      max_sequences: 500
-      exclude: "--exclude-where 'country={country}' 'Nextstrain_clade!={clade}'"
+      max_sequences: 1000
+      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & (Nextstrain_clade=='{clade}') "
       sampling_scheme: "--probabilistic-sampling"
       priorities:
         type: "proximity"
         focus: "variant"
     global:
       group_by: "country year month"
-      max_sequences: 2500
-      exclude: "--exclude-where 'country={country}' 'Nextstrain_clade!={clade}'"
+      max_sequences: 2000
+      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & (Nextstrain_clade=='{clade}') "
       sampling_scheme: "--probabilistic-sampling"
-
-
-

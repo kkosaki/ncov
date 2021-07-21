@@ -18,6 +18,6 @@ cores: 4
 printshellcmds: True
 show-failed-logs: True
 
-keep-going: True
+#keep-going: True
 stats: stats.json
 
