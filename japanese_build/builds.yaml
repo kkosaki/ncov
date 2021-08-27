@@ -10,7 +10,7 @@ use_nextalign: true
 inputs:
   - name: GISAID-DATA
     metadata: data/gisaid_metadata_latest.tsv.gz
-    sequences: data/gisaid_latest.fasta.gz
+    sequences: data/gisaid_latest.fasta.tar.gz
 
 builds:
   japan:
@@ -219,3 +219,10 @@ subsampling:
       max_sequences: 2000
       query: --query "(country!='{country}') & (country!='JapanQuarantine')  & (Nextstrain_clade=='{clade}') "
       sampling_scheme: "--probabilistic-sampling"
+    globl_context:
+      group_by: "country year month"
+      max_sequences: 500
+      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & (Nextstrain_clade!='{clade}') "
+      sampling_scheme: "--probabilistic-sampling"
+
+
