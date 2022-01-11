@@ -19,6 +19,7 @@ https://nextstrain.org/community/kkosaki/ncov/Gammma
 https://nextstrain.org/community/kkosaki/ncov/Delta
 
 - Omicron (Nextstrain Clade: 21K,21L,21M)
+https://nextstrain.org/community/kkosaki/ncov/Omicron
 
 - Pango Lineage R.1 
 https://nextstrain.org/community/kkosaki/ncov/Pango-R1
