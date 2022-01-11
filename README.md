@@ -15,8 +15,10 @@ https://nextstrain.org/community/kkosaki/ncov/Beta
 - Gamma (Nextstrain Clade: 20J)
 https://nextstrain.org/community/kkosaki/ncov/Gammma
 
-- Delta (Nextstrain Clade: 21A)
+- Delta (Nextstrain Clade: 21A, 21I, 21J)
 https://nextstrain.org/community/kkosaki/ncov/Delta
+
+- Omicron (Nextstrain Clade: 21K,21L,21M)
 
 - Pango Lineage R.1 
 https://nextstrain.org/community/kkosaki/ncov/Pango-R1
