@@ -20,6 +20,23 @@ builds:
     country: Japan
     title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan"
     colors: "japanese_build/colors.tsv"
+  Delta:
+    subsampling_scheme: pango_delta
+    pango_lineage: "AY."
+    region: Asia
+    country: Japan
+    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (Delta: 21A,21I,21J))"
+    subclades: "japanese_build/subclades.tsv"
+    colors: "japanese_build/colors.tsv"
+  Omicron:
+    subsampling_scheme: pango_omicron
+    pango_lineage: "BA."
+    region: Asia
+    country: Japan
+    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (Omicron: 21K,21L,21M)"
+    colors: "japanese_build/colors.tsv"
+
+inactive_build:
   Alpha:
     subsampling_scheme: variants
     clade: "20I (Alpha, V1)"
@@ -41,144 +58,6 @@ builds:
     country: Japan
     title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (20J (Gamma, V3))"
     colors: "japanese_build/colors.tsv"
-  Delta:
-    subsampling_scheme: variants-delta-omicron
-    clade1: "21A (Delta)"
-    clade2: "21I (Delta)"
-    clade3: "21J (Delta)"
-    region: Asia
-    country: Japan
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (Delta: 21A,21I,21J))"
-    subclades: "japanese_build/subclades.tsv"
-    colors: "japanese_build/colors.tsv"
-  Omicron:
-    subsampling_scheme: variants-delta-omicron
-    clade1: "21K (Omicron)"
-    clade2: "21L (Omicron)"
-    clade3: "21M (Omicron)"
-    region: Asia
-    country: Japan
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (Omicron: 21K,21L,21M)"
-    colors: "japanese_build/colors.tsv"
-
-inactive_build:
-  Tokyo:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Tokyo
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Tokyo"
-    colors: "japanese_build/colors.tsv"
-  Osaka:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Osaka
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Osaka"
-    colors: "japanese_build/colors.tsv"
-  Aichi:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Aichi
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Aichi"
-    colors: "japanese_build/colors.tsv"
-  Fukuoka:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Fukuoka
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Fukuoka"
-    colors: "japanese_build/colors.tsv"
-  Hokkaido:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Hokkaido
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Hokkaido "
-    colors: "japanese_build/colors.tsv"
-  Okinawa:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Okinawa
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Okinawa"
-    colors: "japanese_build/colors.tsv"
-  Omicron:
-    subsampling_scheme: variants_omicron
-    clade: "21K (Omicron)"
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity  (21K (Omicron))"
-  Pango-R1:
-    subsampling_scheme: pangolin_lineage
-    pango_lineage: "R.1"
-    region: Asia
-    country: Japan
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (Pango lineage:R.1)"
-  Delta-AY29:
-    subsampling_scheme: variants2
-    clade: "21A (Delta)"
-    pango_lineage: "AY.29"
-    region: Asia
-    country: Japan
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Japan (20A (Delta), AY.29)"
-    subclades: "japanese_build/subclades.tsv"
-  Tokyo:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Tokyo
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Tokyo (20A (Delta))"
-  Osaka:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Osaka
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Osaka (20A (Delta))"
-  Aichi:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Aichi
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Aichi (20A (Delta))"
-  Fukuoka:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Fukuoka
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Fukuoka (20A (Delta))"
-  Hokkaido:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Hokkaido
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Hokkaido (20A (Delta))"
-  Okinawa:
-    subsampling_scheme: prefectures
-    region: Asia
-    country: Japan
-    division: Okinawa
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Okinawa (20A (Delta))"
-  Kanto:
-    subsampling_scheme: kanto
-    clade: "21A (Delta)"
-    region: Asia
-    country: Japan
-    division: Tokyo
-    division2: Kanagawa
-    division3: Saitama
-    division4: Chiba
-    division5: Ibaraki
-    division6: Tochigi
-    division7: Gunma
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity in Kanto (20A (Delta))"
-  Delta-AY29-2:
-    subsampling_scheme: variants3
-    clade: "21A (Delta)"
-    pango_lineage: "AY.29"
-    region: Asia
-    country: Japan
-    title: "Phylogenetic analysis of SARS-CoV-2 diversity (20A (Delta), AY.29, focal group: global (except Japan) )"
-    subclades: "japanese_build/subclades.tsv"
 
 traits:
   japan:
@@ -199,36 +78,7 @@ traits:
   Omicron:
     sampling_bias_correction: 2.5
     columns: ["country","division"]
-  Pango-R1:
-    sampling_bias_correction: 2.5
-    columns: ["country","division"]
-  Delta-AY29:
-    sampling_bias_correction: 2.5
-    columns: ["country","division"]
-  Tokyo:
-    sampling_bias_correction: 2.5
-    columns: ["country","division"]
-  Osaka:
-    sampling_bias_correction: 2.5
-    columns: ["country","division"]
-  Aichi:
-    sampling_bias_correction: 2.5
-    columns: ["country","division"]
-  Fukuoka:
-    sampling_bias_correction: 2.5
-    columns: ["country","division"]
-  Hokkaido:
-    sampling_bias_correction: 2.5
-    columns: ["country","division"]
-  Okinawa:
-    sampling_bias_correction: 2.5
-    columns: ["country","division"]
-  Kanto:
-    sampling_bias_correction: 2.5
-    columns: ["country","division"]
-  Delta-AY29-2:
-    sampling_bias_correction: 2.5
-    columns: ["country","division"]
+
 
 files:
   auspice_config: "japanese_build/japan_auspice_config.json"
@@ -238,7 +88,6 @@ files:
   exclude: "japanese_build/exclude.txt"
 
 subsampling:
-  # Default subsampling logic for countries
   japan:
     country_early:
       group_by: "division year month"
@@ -273,7 +122,7 @@ subsampling:
         focus: "country_late"
     quarantine_recent:
       group_by: "division year month"
-      max_sequences: 200
+      max_sequences: 300
       sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country!=JapanQuarantine'"
       priorities:
@@ -303,6 +152,101 @@ subsampling:
       priorities:
         type: "proximity"
         focus: "country_recent"
+    global_background:
+      group_by: "country year month"
+      max_sequences: 500
+      sampling_scheme: "--probabilistic-sampling"
+      query: --query "(country!='{country}') & (country!='JapanQuarantine') "
+
+  # Subsampling for Pango lineage and its sublineages:Omicron
+  pango_omicron:
+    variant:
+      group_by: "division year month"
+      max_sequences: 4000
+      query: --query "(country=='{country}') & (pango_lineage.str.startswith('{pango_lineage}'))"
+      min_date: "--min-date 2021-10-01"
+      sampling_scheme: "--probabilistic-sampling"
+    quarantine:
+      group_by: "division year month"
+      max_sequences: 800
+      query: --query "(country=='JapanQuarantine') & (pango_lineage.str.startswith('{pango_lineage}'))"
+      min_date: "--min-date 2021-10-01"
+      sampling_scheme: "--probabilistic-sampling"
+      priorities:
+        type: "proximity"
+        focus: "variant"
+    global_variant_proxy:
+      group_by: "country year month"
+      max_sequences: 1000
+      query: --query "(country!='{country}') & (pango_lineage.str.startswith('{pango_lineage}'))"
+      min_date: "--min-date 2021-10-01"
+      sampling_scheme: "--probabilistic-sampling"
+      priorities:
+        type: "proximity"
+        focus: "variant"
+    global_quarantine_proxy:
+      group_by: "country year month"
+      max_sequences: 1000
+      query: --query "(country!='{country}') &  (country!='JapanQuarantine') & (pango_lineage.str.startswith('{pango_lineage}'))"
+      min_date: "--min-date 2021-10-01"
+      sampling_scheme: "--probabilistic-sampling"
+      priorities:
+        type: "proximity"
+        focus: "quarantine"
+    global:
+      group_by: "country year month"
+      max_sequences: 1000
+      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & (pango_lineage.str.startswith('{pango_lineage}')) "
+      min_date: "--min-date 2021-10-01"
+      sampling_scheme: "--probabilistic-sampling"
+    globl_background:
+      group_by: "country year month"
+      max_sequences: 500
+      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & ( ~pango_lineage.str.startswith('{pango_lineage}'))"
+      sampling_scheme: "--probabilistic-sampling"
+
+  # Subsampling for Pango lineage and its sublineages:Delta
+  pango_delta:
+    variant:
+      group_by: "division year month"
+      max_sequences: 4000
+      query: --query "(country=='{country}') & (pango_lineage.str.startswith('{pango_lineage}'))"
+      sampling_scheme: "--probabilistic-sampling"
+    quarantine:
+      group_by: "division year month"
+      max_sequences: 800
+      query: --query "(country=='JapanQuarantine') & (pango_lineage.str.startswith('{pango_lineage}'))"
+      sampling_scheme: "--probabilistic-sampling"
+      priorities:
+        type: "proximity"
+        focus: "variant"
+    global_variant_proxy:
+      group_by: "country year month"
+      max_sequences: 1000
+      query: --query "(country!='{country}') & (pango_lineage.str.startswith('{pango_lineage}'))"
+      sampling_scheme: "--probabilistic-sampling"
+      priorities:
+        type: "proximity"
+        focus: "variant"
+    global_quarantine_proxy:
+      group_by: "country year month"
+      max_sequences: 1000
+      query: --query "(country!='{country}') &  (country!='JapanQuarantine') & (pango_lineage.str.startswith('{pango_lineage}'))"
+      sampling_scheme: "--probabilistic-sampling"
+      priorities:
+        type: "proximity"
+        focus: "quarantine"
+    global:
+      group_by: "country year month"
+      max_sequences: 1000
+      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & (pango_lineage.str.startswith('{pango_lineage}')) "
+      sampling_scheme: "--probabilistic-sampling"
+    globl_background:
+      group_by: "country year month"
+      max_sequences: 500
+      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & ( ~pango_lineage.str.startswith('{pango_lineage}'))"
+      sampling_scheme: "--probabilistic-sampling"
+
 
   # Subsampling for Pango lineage 
   pangolin_lineage:
@@ -331,9 +275,7 @@ subsampling:
       max_sequences: 2500
       query: --query "(country!='{country}') & (country!='JapanQuarantine') & (pango_lineage=='{pango_lineage}') "
       sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "lineage"
+
  # Default subsampling logic for variants (Clade) 
   variants:
     variant:
@@ -366,195 +308,5 @@ subsampling:
       group_by: "country year month"
       max_sequences: 500
       query: --query "(country!='{country}') & (country!='JapanQuarantine')  & (Nextstrain_clade!='{clade}') "
-      sampling_scheme: "--probabilistic-sampling"
- # Delta 
-  variants-delta-omicron:
-    variant:
-      group_by: "division year month"
-      max_sequences: 4000
-      query: --query "( (Nextstrain_clade=='{clade1}') | (Nextstrain_clade=='{clade2}') | (Nextstrain_clade=='{clade3}') )  &  (country=='Japan')"
-      sampling_scheme: "--probabilistic-sampling"
-    quarantine:
-      group_by: "division year month"
-      max_sequences: 500
-      query: --query "( (Nextstrain_clade=='{clade1}') | (Nextstrain_clade=='{clade2}') | (Nextstrain_clade=='{clade3}') )  &  (country=='JapanQuarantine')"
-      sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "variant"
-    global_variant_proxy:
-      group_by: "country year month"
-      max_sequences: 1000
-      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & ( (Nextstrain_clade=='{clade1}') | (Nextstrain_clade=='{clade2}') | (Nextstrain_clade=='{clade3}') ) "
-      sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "variant"
-    global_quarantine_proxy:
-      group_by: "country year month"
-      max_sequences: 1000
-      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & ( (Nextstrain_clade=='{clade1}') | (Nextstrain_clade=='{clade2}') | (Nextstrain_clade=='{clade3}') ) "
-      sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "quarantine"
-    global:
-      group_by: "country year month"
-      max_sequences: 1500
-      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & ( (Nextstrain_clade=='{clade1}') | (Nextstrain_clade=='{clade2}') | (Nextstrain_clade=='{clade3}') ) "
-      sampling_scheme: "--probabilistic-sampling"
-    globl_background:
-      group_by: "country year month"
-      max_sequences: 500
-      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & ( (Nextstrain_clade!='{clade1}') | (Nextstrain_clade!='{clade2}') | (Nextstrain_clade!='{clade3}') ) "
-      sampling_scheme: "--probabilistic-sampling"
-  #prefecture
-  prefectures:
-    prefecture:
-      group_by: "division year month"
-      max_sequences: 3000
-      sampling_scheme: "--probabilistic-sampling"
-      exclude: "--exclude-where 'division!={division}'"
-    country:
-      group_by: "division year month"
-      max_sequences: 2000
-      query: --query "(country=='{country}') & (division!='{division}') "
-      sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "prefecture"
-    country_context:
-      group_by: "division year month"
-      max_sequences: 1000
-      sampling_scheme: "--probabilistic-sampling"
-      query: --query "(country!='{country}') & (division!='{division}') "
-    quarantine:
-      group_by: "division year month"
-      max_sequences: 200
-      exclude: "--exclude-where 'country!=JapanQuarantine'"
-      sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "prefecture"
-    global:
-      group_by: "country year month"
-      max_sequences: 500
-      sampling_scheme: "--probabilistic-sampling"
-      query: --query "(country!='{country}') & (country!='JapanQuarantine') "
-      priorities:
-        type: "proximity"
-        focus: "prefecture"
-      group_by: "country year month"
-      max_sequences: 500
-      sampling_scheme: "--probabilistic-sampling"
-      query: --query "(country!='{country}') & (country!='JapanQuarantine') "
-  #Kanto
-  kanto:
-    kanto:
-      group_by: "division year month"
-      max_sequences: 3000
-      sampling_scheme: "--probabilistic-sampling"
-      query: --query " (Nextstrain_clade=='{clade}') & ((division=='{division}') | (division=='{division2}') | (division=='{division3}') | (division=='{division4}') | (division=='{division5}') | (division=='{division6}') | (division=='Kanto'))"
-    country:
-      group_by: "division year month"
-      max_sequences: 1000
-      query: --query " (Nextstrain_clade=='{clade}') &  (country=='{country}') & ((division!='{division}') | (division!='{division2}') | (division!='{division3}') | (division!='{division4}') | (division!='{division5}') | (division!='{division6}') | (division!='Kanto'))"
-      sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "kanto"
-    country_context:
-      group_by: "division year month"
-      max_sequences: 1000
-      exclude: "--exclude-where 'country!={country}'"
-      sampling_scheme: "--probabilistic-sampling"
-    global:
-      group_by: "country year month"
-      max_sequences: 700
-      sampling_scheme: "--probabilistic-sampling"
-      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & (Nextstrain_clade=='{clade}') "
-      priorities:
-        type: "proximity"
-        focus: "kanto"
-    global_context:
-      group_by: "country year month"
-      max_sequences: 500
-      sampling_scheme: "--probabilistic-sampling"
-      query: --query "(country!='{country}') & (country!='JapanQuarantine') "
-  #AY29-2
-  variants3:
-    global_lineage:
-      group_by: "division year month"
-      max_sequences: 2000
-      query: --query "(country!='{country}') & (country!='JapanQuarantine')  & (pango_lineage=='{clade}') "
-      sampling_scheme: "--probabilistic-sampling"
-    lineage_japan:
-      group_by: "division year month"
-      max_sequences: 1500
-      query: --query "(country=='{country}') & (pango_lineage=='{clade}') "
-      sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "global_lineage"
-    quarantine_lineage:
-      group_by: "division year month"
-      max_sequences: 500
-      sampling_scheme: "--probabilistic-sampling"
-      query: --query "(country!='JapanQuarantine')  & (pango_lineage=='{clade}') "
-      priorities:
-        type: "proximity"
-        focus: "global_lineage"
-    globl_context:
-      group_by: "country year month"
-      max_sequences: 500
-      exclude: "--exclude-where 'pango_lineage!={pango_lineage}'"
-      sampling_scheme: "--probabilistic-sampling"
-  #AY29
-  variants2:
-    lineage:
-      group_by: "division year month"
-      max_sequences: 3000
-      exclude: "--exclude-where 'pango_lineage!={pango_lineage}' 'country!={country}'"
-      sampling_scheme: "--probabilistic-sampling"
-    lineage_proxy:
-      group_by: "division year month"
-      max_sequences: 500
-      exclude: "--exclude-where 'Nextstrain_clade!={clade}' 'country!={country}'"
-      sampling_scheme: "--probabilistic-sampling"
-      priorities:
-        type: "proximity"
-        focus: "lineage"
-    quarantine_lineage:
-      group_by: "division year month"
-      max_sequences: 2000
-      sampling_scheme: "--probabilistic-sampling"
-      exclude: "--exclude-where 'pango_lineage!={pango_lineage}' 'country!=JapanQuarantine'"
-    global_lineage:
-      group_by: "country year month"
-      max_sequences: 5000
-      query: --query "(country!='{country}') & (country!='JapanQuarantine') & (pango_lineage=='{pango_lineage}') "
-      sampling_scheme: "--probabilistic-sampling"
-    country_context:
-      group_by: "division year month"
-      max_sequences: 500
-      exclude: "--exclude-where 'country!={country}'"
-      sampling_scheme: "--probabilistic-sampling"
-    globl_context:
-      group_by: "country year month"
-      max_sequences: 300
-      query: --query "(country!='{country}') & (country!='JapanQuarantine') "
-      sampling_scheme: "--probabilistic-sampling"
-
- # Default subsampling logic for variants (Clade) 
-  variants_omicron:
-    variant:
-      group_by: "division year month"
-      max_sequences: 5000
-      exclude: "--exclude-where 'Nextstrain_clade!={clade}' "
-      sampling_scheme: "--no-probabilistic-sampling"
-    globl_background:
-      group_by: "country year month"
-      max_sequences: 500
-      exclude: "--exclude-where 'Nextstrain_clade={clade}' "
       sampling_scheme: "--probabilistic-sampling"
 
