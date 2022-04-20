@@ -41,6 +41,11 @@
       "type": "continuous"
     },
     {
+      "key": "mutational_fitness",
+      "title": "Mutational fitness",
+      "type": "continuous"
+    },
+    {
       "key": "location",
       "title": "Location",
       "type": "categorical"
@@ -104,23 +109,33 @@
       "type": "categorical"
     },
     {
-      "key": "country_exposure",
-      "title": "Country of Exposure",
-      "type": "categorical"
-    },
-    {
-      "key": "division_exposure",
-      "title": "Division of Exposure",
-      "type": "categorical"
-    },
-    {
-      "key": "region_exposure",
-      "title": "Region of Exposure",
-      "type": "categorical"
-    },
-    {
       "key": "epiweek",
       "title": "Epiweek (CDC)",
+      "type": "continuous"
+    },
+    {
+      "key": "QC_overall_score",
+      "title": "Nextclade QC score",
+      "type": "continuous"
+    },
+    {
+      "key": "QC_overall_status",
+      "title": "Nextclade QC status",
+      "type": "categorical"
+    },
+    {
+      "key": "reversion_mutations",
+      "title": "Reversion mutations",
+      "type": "continuous"
+    },
+    {
+      "key": "potential_contaminants",
+      "title": "Potential contaminants",
+      "type": "continuous"
+    },
+    {
+      "key": "rare_mutations",
+      "title": "Rare mutations",
       "type": "continuous"
     }
   ],
@@ -142,8 +157,8 @@
     "clade_membership",
     "pango_lineage",
     "host",
-    "author",
-    "epiweek"
+    "epiweek",
+    "QC_overall_status"
   ],
   "panels": ["tree", "map", "entropy", "frequencies"]
 }
